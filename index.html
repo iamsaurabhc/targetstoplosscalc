@@ -1,0 +1,65 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+	<style>
+        
+		body { 
+            background: #e8f1f9;
+            font-family: 'Lora', serif;
+        }
+
+        .col {
+            background: white;
+        }
+
+        .green {
+            color:green;
+        }
+
+        .red {
+            color:red;
+        }
+	</style>
+{% endblock %}
+
+
+{% block title %}
+F&O Strategy
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2">Target and Stoploss Calculator</h1>
+      <h4><em>(for shares, f&o positions)</em></h4></br>
+
+      {{ wtf.quick_form(form) }} </br>
+
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="pt-3"><strong>CALL strike</strong></p></br>
+                <p><span class="green"><strong>Target -> {{ output.call_target }} <span><span class="red"></br>Stoploss -> {{ output.call_stoploss }}</strong><span></p>
+            </div>
+            <div class="col">
+                <p class="pt-3"><strong>PUT strike</strong></p></br> 
+                <p><span class="green"><strong>Target -> {{ output.put_target }} </span></br><span class="red">Stoploss -> {{ output.put_stoploss }}</strong></span></p>
+            </div>
+        </div></br>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
