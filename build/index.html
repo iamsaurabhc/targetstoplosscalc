@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+F&O Strategy
+</title>
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/fontawesome-all.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+	<style>
+        
+		body { 
+            background: #e8f1f9;
+            font-family: 'Lora', serif;
+        }
+
+        .col {
+            background: white;
+        }
+
+        .green {
+            color:green;
+        }
+
+        .red {
+            color:red;
+        }
+	</style>
+
+  </head>
+  <body>
+    
+    
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2">Target and Stoploss Calculator</h1>
+      <h4><em>(for shares, f&o positions)</em></h4></br>
+
+      
+<form action="" method="post"
+  class="form" role="form">
+  <input id="csrf_token" name="csrf_token" type="hidden" value="ImQ3NGRjOWQxM2JhZmUwNzY2Y2Q3NDgwMmUxZTQ0ODk5ZjhkOTQ4NzIi.YZvLZQ.e4RvAtwZvAq81_pguHqnbCFE7Nw">
+  
+    
+
+
+
+
+
+
+<div class="form-group  required"><label class="form-control-label" for="call_ltp">Call Strike LTP</label>
+        
+          <input class="form-control" id="call_ltp" name="call_ltp" required type="text" value="">
+        
+  </div>
+
+
+    
+
+
+
+
+
+
+<div class="form-group  required"><label class="form-control-label" for="put_ltp">Put Strike LTP</label>
+        
+          <input class="form-control" id="put_ltp" name="put_ltp" required type="text" value="">
+        
+  </div>
+
+
+    
+
+
+
+
+
+
+<div class="form-group  required"><label class="form-control-label" for="target">Target (in rs)</label>
+        
+          <input class="form-control" id="target" name="target" required type="text" value="">
+        
+  </div>
+
+
+    
+
+
+
+
+
+
+<div class="form-group  required"><label class="form-control-label" for="stoploss">Stoploss (in rs)</label>
+        
+          <input class="form-control" id="stoploss" name="stoploss" required type="text" value="">
+        
+  </div>
+
+
+    
+
+
+
+
+<div class="form-group "><label class="form-control-label" for="lot_size">Lot Size</label>
+        
+          <select class="form-control" id="lot_size" name="lot_size"><option value="x25">x25</option><option value="x50">x50</option></select>
+        
+  </div>
+
+
+    
+
+
+
+
+<div class="form-group "><label class="form-control-label" for="type_">Type of Strategy</label>
+        
+          <select class="form-control" id="type_" name="type_"><option value="SELL">SELL</option><option value="BUY">BUY</option></select>
+        
+  </div>
+
+
+    
+
+
+
+
+
+  
+
+  
+  
+
+
+    <input class="btn btn-primary" id="submit" name="submit" type="submit" value="Submit">
+  
+
+
+
+
+    
+
+</form> </br>
+
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="pt-3"><strong>CALL strike</strong></p></br>
+                <p><span class="green"><strong>Target -> 0 <span><span class="red"></br>Stoploss -> 0</strong><span></p>
+            </div>
+            <div class="col">
+                <p class="pt-3"><strong>PUT strike</strong></p></br> 
+                <p><span class="green"><strong>Target -> 0 </span></br><span class="red">Stoploss -> 0</strong></span></p>
+            </div>
+        </div></br>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
