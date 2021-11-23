@@ -10,6 +10,7 @@ app = Flask(__name__, template_folder='.')
 
 # Flask-WTF requires an encryption key - the string can be anything
 app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
+somechange = "somechange"
 
 # Flask-Bootstrap requires this line
 Bootstrap(app)
