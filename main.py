@@ -1,5 +1,4 @@
 from flask import Flask, render_template, session # redirect, url_for, session
-from flask.ext.session import Session
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -7,7 +6,7 @@ from wtforms.fields.choices import SelectField
 from wtforms.validators import DataRequired
 
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='.')
 
 # Flask-WTF requires an encryption key - the string can be anything
 app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
